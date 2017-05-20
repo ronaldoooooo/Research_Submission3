@@ -1,0 +1,61 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa">
+  <h:head>
+    <h:title>Law_Pre-entry_Form</h:title>
+    <model>
+      <instance>
+        <data id="build_Law-Pre-entry-Form_1495315234">
+          <meta>
+            <instanceID/>
+          </meta>
+          <name1/>
+          <name2/>
+          <school/>
+          <Course/>
+          <DoB/>
+        </data>
+      </instance>
+      <itext>
+        <translation lang="English">
+          <text id="/data/name1:label">
+            <value>First Name</value>
+          </text>
+          <text id="/data/name2:label">
+            <value>Lasts Name</value>
+          </text>
+          <text id="/data/school:label">
+            <value>Previous School</value>
+          </text>
+          <text id="/data/Course:label">
+            <value>Course Applying For</value>
+          </text>
+          <text id="/data/DoB:label">
+            <value>Date of Birth</value>
+          </text>
+        </translation>
+      </itext>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+      <bind nodeset="/data/name1" type="string"/>
+      <bind nodeset="/data/name2" type="string"/>
+      <bind nodeset="/data/school" type="string"/>
+      <bind nodeset="/data/Course" type="string"/>
+      <bind nodeset="/data/DoB" type="date"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/name1">
+      <label ref="jr:itext('/data/name1:label')"/>
+    </input>
+    <input ref="/data/name2">
+      <label ref="jr:itext('/data/name2:label')"/>
+    </input>
+    <input ref="/data/school">
+      <label ref="jr:itext('/data/school:label')"/>
+    </input>
+    <input ref="/data/Course">
+      <label ref="jr:itext('/data/Course:label')"/>
+    </input>
+    <input ref="/data/DoB">
+      <label ref="jr:itext('/data/DoB:label')"/>
+    </input>
+  </h:body>
+</h:html>
